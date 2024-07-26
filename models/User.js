@@ -1,6 +1,5 @@
 const mongoose = require ('mongoose')
-const {model, Scheme, Schema} = require ('mongoose')
-const {stringifyWithMaxLen} = require("mongodb/src/mongo_logger");
+const {model, Schema} = require ('mongoose')
 mongoose.Schema.Types.String.set('trim', true)
 const userScheme = new Scheme ({
     _id: mongoose.Scheme.Types.ObjectId,
