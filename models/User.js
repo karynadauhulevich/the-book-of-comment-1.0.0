@@ -1,8 +1,8 @@
 const mongoose = require ('mongoose')
 const {model, Schema} = require ('mongoose')
 mongoose.Schema.Types.String.set('trim', true)
-const userScheme = new Scheme ({
-    _id: mongoose.Scheme.Types.ObjectId,
+const userSchema = new Schema ({
+    _id: mongoose.Schema.Types.ObjectId,
 
     firstName: {
     type:String,
@@ -14,13 +14,13 @@ const userScheme = new Scheme ({
 },
 comments: [
     {
-        type: mongoose.Scheme.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Comment'
     }
 ]
 }
 )
-module.experts = model('User', userScheme)
+module.experts = model('User', userSchema)
 
 
 
