@@ -12,7 +12,7 @@ describe('USER CREATE' , () => {
         it('user create all fields', (done) => {
             postData = {
                 query: userCreateQ,
-                variables: user.userInput
+                variables: user
 
             }
 

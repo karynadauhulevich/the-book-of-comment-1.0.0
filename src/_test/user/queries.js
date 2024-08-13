@@ -5,4 +5,4 @@ const userCreateQ= `mutation UserCreate($userInput: UserFields) {
     _id
   }
 }`
-module.experts = { userCreateQ }
+module.exports = { userCreateQ }
