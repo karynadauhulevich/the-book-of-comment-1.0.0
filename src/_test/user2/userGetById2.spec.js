@@ -1,7 +1,6 @@
 const { expect } = require("chai");
-const { user2GetByIdQ, userCreateQ} = require('./queries2');
+const { user2GetByIdQ, userCreateQ2} = require('./queries2');
 const gqlRequest2 =require ('./gqlRequest2')
-const userCreateQ2 = require ('./queries2');
 const {user2} = require('./data2')
 
 

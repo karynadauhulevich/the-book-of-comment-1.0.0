@@ -7,6 +7,7 @@
 "test1" : "mocha src/_test/user3/user3Create.spec.js",
 "test4" : "mocha src/_test/user4/User4Create.spec.js",
  "test5" : "mocha src/_test/user5/UserCreate5.spec.js",
+ "test6" : "mocha src/_test/user3/user3GetById.spec.js",
 "start": "nodemon src/index.js"
 },
 "keywords": [],
