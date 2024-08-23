@@ -1,7 +1,8 @@
-const user4 = {
+const user4 ={
     userInput: {
-        lastName:'user4FirstName' ,
-        firstName: 'user4LastNameName',
+        lastName: 'testFirstName',
+        firstName: 'testLastName'
     }
 }
-module.exports = user4
+module.exports = {user4}
+

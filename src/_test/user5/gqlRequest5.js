@@ -1,9 +1,9 @@
 const request = require('supertest');
 const url = 'http://localhost:5000';
 
-function gqlRequest(postData){
+function gqlRequest5(postData){
     return request(url)
         .post('/')
         .send(postData);
 }
-module.exports = gqlRequest;
+module.exports = gqlRequest5;

@@ -1,8 +1,8 @@
 const {expect} = require('chai')
-const {userCreateQ1} = require('./queries1')
-const{user2} = require('./data1')
-const gqlRequest1 = require('./gqlRequest2')
 
+const {userCreateQ1} = require('./queries2')
+const{user2} = require('./data2')
+const gqlRequest1 = require('./gqlRequest2')
 
 
 let respData = null

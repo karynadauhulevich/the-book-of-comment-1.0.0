@@ -1,28 +1,35 @@
 const { expect } = require("chai");
-const { userGetById } = require('./queries');
-const { user } = require('./data');
-const gqlRequest = require ('../gqlRequest')
-const userCreateQ= require ('./queries');
+const { user2GetByIdQ, userCreateQ} = require('./queries2');
+const gqlRequest2 =require ('./gqlRequest2')
+const userCreateQ2 = require ('./queries2');
+const {user2} = require('./data2')
+
+
+
+
 
 let respData = null
 let postData = null
 let userID = null
 
-describe('USER GET BY ID1', () => {
-    describe ('USER GET BY ID POSITIVE',()  => {
 
-        before('user create', (done) =>{
+describe('USER GET BY ID2', () => {
+    describe ('USER GET BY ID POSITIVE',()  => {
+        before ('user create', (done) =>{
             postData ={
-                query : userCreateQ,
-                variables : user
+                query : userCreateQ2,
+                variables :user2
+
+
 
             }
-            gqlRequest(postData)
+
+            gqlRequest2(postData)
                 .expect(200)
                 .end((err, res) => {
                     if (err) return done(err)
                     userID = res.body.data.userCreate._id
-                    console.log('userID =', userID)
+                    console.log('userID=',userID)
 
                     done()
                 })
@@ -30,11 +37,13 @@ describe('USER GET BY ID1', () => {
 
         it ('user get by id', (done) =>{
             postData ={
-                query : userGetByIdQ,
-                variables :{userId : userID}
-}
+                query : user2GetByIdQ,
+                variables : {
+                    userId: userID
+                }
+            }
 
-            gqlRequest(postData)
+            gqlRequest2(postData)
                 .expect(200)
                 .end((err, res) => {
                     if (err) return done(err)
@@ -42,15 +51,10 @@ describe('USER GET BY ID1', () => {
                     console.log(respData);
                     expect(respData._id).eq(userID)
                     done()
+                })
+        })
     })
-    })
+
+
+
 })
-
-
-
-    })
-
-
-
-
-

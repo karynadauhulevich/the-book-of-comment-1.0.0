@@ -1,11 +1,9 @@
-const userCreateQ3 = `
-  mutation Mutation($userInput: UserFields!) {
-    userCreate(userInput: $userInput) {
-      _id
-      firstName
-      lastName
-    }
+const userCreateQ3 =  `mutation UserCreate($userInput: UserFields) {
+  userCreate(userInput: $userInput) {
+    firstName
+    lastName
+    _id
   }
-`;
+}`
 
 module.exports = {userCreateQ3};
