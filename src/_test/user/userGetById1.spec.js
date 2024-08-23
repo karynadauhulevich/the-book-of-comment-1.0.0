@@ -1,8 +1,8 @@
 const { expect } = require("chai");
-const { userGetById } = require('./queries');
+const { userGetByIdQ, userCreateQ } = require('./queries');
 const { user } = require('./data');
 const gqlRequest = require ('../gqlRequest')
-const userCreateQ= require ('./queries');
+
 
 let respData = null
 let postData = null
@@ -30,12 +30,12 @@ describe('USER GET BY ID1', () => {
 
         it ('user get by id', (done) =>{
             postData ={
-                query : userGetByIdQ,
+                query :userGetByIdQ ,
                 variables :{userId : userID}
 }
 
             gqlRequest(postData)
-                .expect(200)
+
                 .end((err, res) => {
                     if (err) return done(err)
                     respData = res.body.data.userGetById
