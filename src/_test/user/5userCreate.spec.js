@@ -16,6 +16,9 @@ before('DeleteMany', ()=>{
 })
 describe('USER CREATE', () => {
     describe('USER CREATE - POSITIVE TESTS', () => {
+        before('BEFORE ALL HOOK', ()=> {
+            console.log('hook')
+        })
         it('user create all fields 1', (done) => {
             postData = {
                 query: userCreateQ,
