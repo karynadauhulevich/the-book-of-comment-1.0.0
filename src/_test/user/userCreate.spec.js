@@ -7,9 +7,12 @@ const mongoose = require('mongoose');
 
 let respData = null;
 let postData = null;
+let hook = 'beforeHook'
 
-before('deleteAllUsers', ()=>{
+
+before('DeleteMany', ()=>{
    User.deleteMany({})
+    console.log('users are deleted')
 })
 describe('USER CREATE', () => {
     describe('USER CREATE - POSITIVE TESTS', () => {
