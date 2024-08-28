@@ -4,7 +4,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha src/_test/user/helper.js    src/_test/user/userGetById1.spec.js",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "test4": "mocha src/_test/user4/user4GetById.js"
   },
   "keywords": [],
   "author": "",

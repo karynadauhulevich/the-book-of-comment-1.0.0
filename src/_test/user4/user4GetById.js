@@ -3,6 +3,7 @@ const gqlRequest4 = require('./gqlRequest4');
 const {user4}= require('./data4')
 const {userCreateQ4, user4GetByIdQ}= require('./queries4');
 const {userGetByIdQ} = require("../user/queries");
+const gqlRequest = require("../user3/gqlRequest3");
 
 let respData=null
 let postData = null
@@ -16,7 +17,7 @@ describe('get by ID4', () => {
                 variables : user4
 
             }
-         gqlRequest(postData)
+         gqlRequest4(postData)
             .expect(200)
              .end((err, res) => {
                  if(err) return done(err)
@@ -39,15 +40,14 @@ describe('get by ID4', () => {
             }
 
 
-                gqlRequest4(postData)
-                    .expect(200)
-                    .end((err, res) => {
-                        if(err) return done(err)
-                        UserId = res.body.data.userGetById
-                        expect(respData._id).eq(UserId.id)
+            gqlRequest4(postData)
 
+                .end((err, res) => {
+                    if (err) return done(err)
+                    respData = res.body.data.userGetById
+                    console.log(respData);
+                    expect(respData._id).eq(UserId)
 
-                        done()
 
 
 
