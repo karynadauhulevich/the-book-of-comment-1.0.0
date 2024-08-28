@@ -3,7 +3,9 @@ const mongoose= require('mongoose')
 const typeDefs = require('./graphql/typeDefs')
 const resolvers = require('./graphql/resolvers')
 
-const MONGODB = 'mongodb+srv://Karyna:Karina2104!@cluster0.4jq21yo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+
+// const MONGODB = 'mongodb+srv://Karyna:Karina2104!@cluster0.4jq21yo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const MONGODB = 'mongodb://localhost:27017/theBookOfComments'
 const server =new ApolloServer( {
     typeDefs,
     resolvers
