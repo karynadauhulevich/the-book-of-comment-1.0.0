@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/_test/user/helper.js    src/_test/user/userGetById1.spec.js",
+    "test": "mocha src/_test/user/helper.js src/_test/user/1_userGetById1.spec.js",
     "start": "nodemon src/index.js",
-    "test4": "mocha src/_test/user4/user4GetById.js"
+    "test4": "mocha src/_test/user4/user4GetById.js",
+    "test2": "mocha src/_test/user/helper.js src/_test/user/2_userGetAll2.spec.js",
+    "test3": "mocha src/_test/user/helper.js src/_test/user/3_userUpdatedById1.spec.js"
   },
   "keywords": [],
   "author": "",
