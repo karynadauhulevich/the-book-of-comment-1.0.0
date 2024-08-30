@@ -11,7 +11,7 @@ let postData = null
 describe('UserGetAll', () => {
     describe ('userGetAll - positive tests', () => {
 
-        it ('should return userGetAll ', () => {
+        it ('should return userGetAll ', (done) => {
             postData = {
                  query: `query UsersGetAll($amount: Int) {
   usersGetAll(amount: $amount) {
