@@ -15,4 +15,11 @@ const userGetByIdQ =
     lastName
   }
 }`
-module.exports = {userCreateQ, userGetByIdQ}
+const userCreateWrongQ= `mutation UserCreate($userInput: UserFields) {
+  userCreate(userInput: $userInput) {
+    firstName
+    lastName
+    _id
+  }
+}`
+module.exports = {userCreateQ, userGetByIdQ, userCreateWrongQ}

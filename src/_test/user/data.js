@@ -6,8 +6,8 @@ const user ={
 }
 const userEmptyField ={
     userInput: {
-        lastName: '',
-        firstName: ''
+        firstName: '',
+        lastName: null
     }
 }
 

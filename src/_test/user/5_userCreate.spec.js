@@ -5,16 +5,14 @@ const gqlRequest = require('../gqlRequest');
 const User = require('../../models/User');
 const mongoose = require('mongoose');
 const userEmptyField = require('./data')
+const userCreateWrongQ = require('./queries');
 
 let respData = null;
 let postData = null;
 let hook = 'beforeHook'
 
 
-before('DeleteMany', ()=>{
-   User.deleteMany({})
-    console.log('users are deleted')
-})
+
 describe('USER CREATE', () => {
     describe('USER CREATE - POSITIVE TESTS', () => {
         before('BEFORE ALL HOOK', ()=> {
@@ -73,7 +71,7 @@ describe('USER CREATE', () => {
     });
 
 describe('USER CREATE - negative', () => {
-    it('user create all fields ', (done) => {
+    it('user create empty last name', (done) => {
         postData = {
             query: userCreateQ,
             variables: userEmptyField
@@ -88,11 +86,30 @@ describe('USER CREATE - negative', () => {
                 done();
             });
     });
+    it('user create -wrong query', (done) => {
+        postData = {
+            query: userCreateWrongQ,
+            variables: user
+        }
+        gqlRequest(postData)
+            .expect(400)
+            .end((err, res) => {
+                if (err) return done(err);
+                respData = res.body;
+                console.log(respData);
+                //expect(respData.message).eq("Cannot read properties of undefined (reading \'firstName\')");
+                done();
+            });
 
+
+
+
+        });
+    });
 
 
 
 })
-    })
+
 
 
