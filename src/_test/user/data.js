@@ -4,11 +4,11 @@ const user ={
         firstName: 'testLastName'
     }
 }
-const userEmptyFields ={
+const userEmptyField ={
     userInput: {
         lastName: '',
         firstName: ''
     }
 }
 
-    module.exports =  {user,userEmptyFields }
+    module.exports =  {user,userEmptyField }

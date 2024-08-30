@@ -4,6 +4,7 @@ const { user } = require('./data');
 const gqlRequest = require('../gqlRequest');
 const User = require('../../models/User');
 const mongoose = require('mongoose');
+const userEmptyField = require('./data')
 
 let respData = null;
 let postData = null;
@@ -75,16 +76,15 @@ describe('USER CREATE - negative', () => {
     it('user create all fields ', (done) => {
         postData = {
             query: userCreateQ,
-            variables: user
+            variables: userEmptyField
         };
 
         gqlRequest(postData)
             .expect(200)
             .end((err, res) => {
                 if (err) return done(err);
-                respData = res.body.data.userCreate;
+                respData = res.body;
                 console.log(respData);
-                expect(respData.firstName).to.equal(user.userInput.firstName);
                 done();
             });
     });

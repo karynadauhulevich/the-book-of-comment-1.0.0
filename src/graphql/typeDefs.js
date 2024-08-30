@@ -39,7 +39,7 @@ module.exports = gql`
     }
 
     type Mutation {
-        userCreate(userInput: UserFields): User
+        userCreate(userInput: UserFields!): User
         userUpdateById(userInput: UserFields): User
         userDeleteById(userId: ID): Boolean
         commentCreate(commentInput: CommentFields): Comment!
