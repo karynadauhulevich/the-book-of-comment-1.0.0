@@ -1,4 +1,4 @@
-const{expect}=require('chai')
+const{expect}= require('chai')
 const gqlRequest = require('../gqlRequest')
 
 
@@ -14,9 +14,8 @@ describe('User delete 1', () => {
   userDeleteById(userId: $userId)
 } `,
                 variables: {
-                userInput: {
-                userId: process.env.USER_ID
-                }
+                    userId: process.env.USER_ID
+
                 }
             }
             gqlRequest(postData)
@@ -25,14 +24,14 @@ describe('User delete 1', () => {
                     if (err) return done(err);
                     respData = res.body.data.userDeleteById;
                     console.log(respData);
-                    expect(respData).to.be.false;
+                    expect(respData).to.be.true;
                     done();
 
 
 
 
 
-            })
+                })
 
 
 

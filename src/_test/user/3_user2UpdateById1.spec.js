@@ -12,7 +12,13 @@ describe('User3 Updated ById', () => {
     describe('update by id()', () => {
         it('user updated by id', (done) => {
             postData= {
-                query: userUpdateByIdQ,
+                query: `mutation UserUpdateById($userInput: UserFields) {
+  userUpdateById(userInput: $userInput) {
+    _id
+    firstName
+    lastName
+  }
+}`,
                 variables: {
                     userInput: {
                         firstName: 'UpdatedFirstName',
