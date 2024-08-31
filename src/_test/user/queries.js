@@ -22,10 +22,11 @@ const userCreateWrongQ= `mutation UserCreate($userInput: UserFields) {
   }
 }`
 const userUpdateByIdQ = `mutation UserUpdateById($userInput: UserFields) {
-    userUpdateById(userInput: $userInput) {
-        _id
-        firstName
-    }
+  userUpdateById(userInput: $userInput) {
+    _id
+    firstName
+    lastName
+  }
 }`
 
 module.exports = {userCreateQ, userGetByIdQ, userCreateWrongQ, userUpdateByIdQ}
