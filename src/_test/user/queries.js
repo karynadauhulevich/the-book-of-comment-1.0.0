@@ -5,7 +5,6 @@ const userCreateQ= `mutation UserCreate($userInput: UserFields) {
     _id
   }
 }`
-module.exports = { userCreateQ }
 
 const userGetByIdQ =
  `query UserGetById($userId: ID!) {
@@ -22,10 +21,11 @@ const userCreateWrongQ= `mutation UserCreate($userInput: UserFields) {
     _id
   }
 }`
-const UserGetByIdQ =`mutation UserUpdateById($userInput: UserFields) {
-  userUpdateById(userInput: $userInput) {
-    _id
-    firstName
-  }
+const userUpdateByIdQ = `mutation UserUpdateById($userInput: UserFields) {
+    userUpdateById(userInput: $userInput) {
+        _id
+        firstName
+    }
 }`
-module.exports = {userCreateQ, userGetByIdQ, userCreateWrongQ}
+
+module.exports = {userCreateQ, userGetByIdQ, userCreateWrongQ, userUpdateByIdQ}

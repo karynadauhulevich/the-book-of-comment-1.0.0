@@ -1,6 +1,6 @@
-const {expect} = require('chai').expect;
+const {expect} = require('chai');
 const gqlRequest = require('../gqlRequest');
-const UserGetByIdQ = require('./queries');
+const userUpdateByIdQ = require('./queries');
 
 
 let respData = null
@@ -12,7 +12,7 @@ describe('User Update ById 1', () => {
         it('Should be able to update ById 1', (done) => {
 
             postData = {
-                query: UserGetByIdQ,
+                query: userUpdateByIdQ,
                 variables: {
                     userInput: {
                         firstName: 'UpdatedFirstName',

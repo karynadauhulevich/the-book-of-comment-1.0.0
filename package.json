@@ -9,9 +9,8 @@
     "test3": "mocha src/_test/user/helper.js src/_test/user/3_user2UpdateById1.spec.js",
     "test4": "mocha src/_test/user/helper.js src/_test/user/4_userDelete1.spec.js",
     "test0": "mocha src/_test/user/helper.js src/_test/user/**spec.js",
-    "test5": "mocha src/_test/user2/helper2.js src/_test/user2/1_userGetById2.spec.js",
     "test6": "mocha src/_test/user/helper.js src/_test/user/5_userCreate.spec.js",
-    "test7": "mocha src/_test/user/helper.js src/_test/user2/2_userGetAll2.spec.js"
+    "test7": "mocha src/_test/user3/helper.js src/_test/user3/1_userGetById.spec.js"
 
   },
   "keywords": [],
