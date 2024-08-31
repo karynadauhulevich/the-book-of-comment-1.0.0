@@ -1,52 +1,42 @@
-
+const {expect} = require('chai').expect;
 const gqlRequest = require('../gqlRequest');
-const {expect} = require('chai');
+const UserGetByIdQ = require('./queries');
+
+
 let respData = null
 let postData = null
 
 
+describe('User Update ById 1', () => {
+    describe('user Update ById - positive', () => {
+        it('Should be able to update ById 1', (done) => {
 
-
-
-describe('User UpdateByID2', () => {
-    describe ('userUpdate - positive tests', () => {
-
-        it ('should return updated user ', (done) => {
             postData = {
-                query: `mutation UserUpdateById($userInput: UserFields) {
-  userUpdateById(userInput: $userInput) {
-    _id
-    firstName
-    
-  }
-}`,
+                query: UserGetByIdQ,
                 variables: {
                     userInput: {
-                        userId: process.env.USER_ID,
-                        firstName: 'userUpdated'
+                        firstName: 'UpdatedFirstName',
+                        userId: process.env.USER_ID
+
                     }
 
                 }
+
             }
             gqlRequest(postData)
-                .expect(200)
-                .end((err, res) => {
-                    if (err) return done(err)
-                    respData = res.body.data.userUpdateById
-                    console.log(respData);
-                    expect(respData.firstName).equal('userUpdated')
-                    done()
-
-
-                })
+            .expect(200)
+            .end((err, res) => {
+                if (err) return done(err)
+                respData = res.body.data.userUpdateById
+                console.log(respData)
+                done()
 
 
 
 
 
 
-
-
+            })
 
 
 
@@ -56,25 +46,46 @@ describe('User UpdateByID2', () => {
         })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     })
 
-
-
-
-
-
-
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

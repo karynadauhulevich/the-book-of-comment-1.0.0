@@ -6,7 +6,7 @@ const User = require('../../models/User');
 
 let respData = null;
 let postData = null;
-process.env.USER_ID2 = null
+process.env.USER_ID = null
 
 
 
@@ -28,7 +28,7 @@ describe('USER CREATE', () => {
             .end((err, res) => {
                 if (err) return done(err);
                 respData = res.body.data.userCreate;
-                process.env.USER_ID2 = respData._id;
+                process.env.USER_ID = respData._id;
                 console.log('TEST USER HAS BEEN CREATED',respData);
                 done();
             });

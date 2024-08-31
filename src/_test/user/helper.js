@@ -8,16 +8,14 @@ let respData = null;
 let postData = null;
 process.env.USER_ID = null
 
-
-
-before('DeleteMany', ()=>{
+before('DELETE MANY', ()=>{
     User.deleteMany({})
     console.log('users are deleted')
 })
+
+
 describe('USER CREATE', () => {
-
-
-        it('user create all fields - helper ', (done) => {
+    it('user create all fields - helper ', (done) => {
             postData = {
                 query: userCreateQ,
                 variables: user
