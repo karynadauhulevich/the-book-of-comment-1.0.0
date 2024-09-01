@@ -9,7 +9,7 @@ let respData = null
 let postData = null
 
 describe('User3 Updated ById', () => {
-    describe('update by id()', () => {
+    describe('update by id', () => {
         it('user updated by id', (done) => {
             postData= {
                 query: `mutation UserUpdateById($userInput: UserFields) {

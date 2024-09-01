@@ -13,12 +13,15 @@
     "test7": "mocha src/_test/user3/helper.js src/_test/user3/1_userGetById.spec.js",
     "test8": "mocha src/_test/user3/helper.js src/_test/user3/2_userGetAll.spec.js",
     "test9": "mocha src/_test/user3/helper.js src/_test/user3/3_userUpdatedById.spec.js",
-    "test10": "mocha src/_test/user3/helper.js src/_test/user3/4_userDelete.spec.js"
-
-
-
-
-
+    "test10": "mocha src/_test/user3/helper.js src/_test/user3/4_userDelete.spec.js",
+    "test11": "mocha src/_test/user4/helper.js src/_test/user4/1_userGetById.spec.js",
+    "test12": "mocha src/_test/user4/helper.js src/_test/user4/3_userUpdatedById.spec.js",
+    "test13": "mocha src/_test/user4/helper.js src/_test/user4/4_userDeletedById.spec.js",
+    "test14": "mocha src/_test/user5/helper.js src/_test/user5/1_userGetById.spec.js",
+    "test15": "mocha src/_test/user4/helper.js src/_test/user4/2_userGetAll.spec.js",
+    "test16": "mocha src/_test/user5/helper.js src/_test/user5/2_userGetAll.spec.js",
+    "test17": "mocha src/_test/user5/helper.js src/_test/user5/3_userUpdatedById.spec.js",
+    "test18": "mocha src/_test/user5/helper.js src/_test/user5/4_userDeletedById.spec.js"
   },
   "keywords": [],
   "author": "",
